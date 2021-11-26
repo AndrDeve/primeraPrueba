@@ -1,0 +1,473 @@
+@media screen and (max-width:1000px){
+    .menu__container .logo1{
+        height: 43px;
+        width: 200px;
+    }
+
+    .menu__links li a{
+        font-size: 15px;
+    }
+
+    .menu__links{
+        height: 60%;
+    }
+
+    /* slider */
+    /*cambiar el padding top */
+    main{
+        padding-top: 30px;
+        width: 100%;
+    }
+
+    .container-slider{
+        margin-bottom: 20px;
+    }
+
+    /* para que se vea toda la imagen del slider */
+    .slider__img{
+        height: auto;
+        margin-top: 50px;
+        object-fit:contain; /* con esto */
+        overflow: hidden;
+    }
+
+    /*bienvenido*/
+
+    .container-welcome{
+        display: block;
+    }
+
+    .container-img{
+        justify-content: center;
+    }
+
+    .img-welcome{
+        width: 200px;
+        height: 170px;
+        object-fit: contain;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close{
+        top: 110px;
+        right: 180px;
+    }
+
+    /***** textos de welcome ******/
+    .menu__container{
+        text-align: center;
+    }
+
+    .container-img{
+        text-align: center;
+    }
+
+    .text-welcome .bienve{
+        font-size: 17px;
+    }
+
+    .text-welcome h1{
+        font-size: 37px;
+    }
+
+    .text-welcome .text-parrafo{
+        font-size: 15px;
+    }
+
+    /************ textos con íconos ****************/
+
+    .text-dos{
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+    .text-item i{
+        font-size: 45px;
+        margin-bottom: 1px;
+    }
+
+    .text-item h2{
+        margin-bottom: 1px;
+        font-size: 20px;
+    }
+
+    .text-item p{
+        margin-bottom: 40px;
+    }
+
+    /************ Nuestros clientes ****************/
+    .titulo-clientes h2{
+        font-size: 30px;
+        padding-top: 42px;
+    }
+
+    .clientes-item img{
+        height: 200px;
+        width: 200px;
+    }
+
+    /************ Linea de productos ****************/
+    .lineas-productos h2{
+        font-size: 35px;
+    }
+
+    .productos-item img{
+        height: 90px;
+        width: 90px;
+    }
+
+    .productos-item p{
+        font-size: 20px;
+    }
+
+    /***** Donde encontrarnos *****//***** Donde encontrarnos *****/
+    .encontrarnos-container{
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .encontrarnos-item{
+        display: block;
+    }
+
+    .encontrarnos-container .tit-enc{
+        font-size: 30px;
+        padding: 40px 0 40px 0;
+    }
+    
+    .mapa iframe{
+        height: 300px;
+        width: 400px;
+        padding-bottom: 20px;
+    }
+
+    .direccion .tit-dir{
+        font-size: 32px;
+    }
+
+    .direccion p{
+        font-size: 17px;
+    }
+
+    .container-contact-mapa{
+       display: block;
+       text-align: center;
+    }
+    
+    .logo2 img{
+        margin-bottom: 30px;
+    }
+
+    .contactos2{
+         margin-bottom: 30px;
+    }
+
+    .mapa2 iframe{
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width:800px){
+    /*poner logo y links modo columna */
+    .menu__container{
+        display: block;
+    }
+
+    /*tamaño de logo*/
+    .menu__container .logo1{
+        height: 30px;
+        width: 130px;
+    }
+
+    /* ul de los li*/
+    .menu__links{
+        height: 40%;
+        justify-content: center;
+    }
+
+    .slider__btn{
+        width: 40px;
+        height: 40px;
+        font-size: 32px;
+    }
+
+    .tienes-pregunta h2{
+        font-size: 35px;
+    }
+
+    .text-pregunta p{
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .slider__btn{
+        width: 35px;
+        height: 35px;
+        font-size: 29px;
+    }
+
+    .btn-wsp{
+        font-size: 27px;
+        width: 40px;
+        height: 40px;
+        padding-left: 8px;
+        padding-top: 2px;
+    }
+
+    /* cambiar tamaño de los links */
+    .menu__links li a{
+        font-size: 12px;
+        padding: 0 15px 0 15px;
+    }
+
+    /* cambiar tamaño de letra del submenú */
+    .menu__item .menu__inside .menu__link--inside{
+        font-size: 14px;
+        padding: 3px 10px 3px 10px;
+    }
+
+    .text-welcome h1{
+        font-size: 30px;
+    }
+
+    /******************** 4 IMAGENES CON ZOOM ********************/
+    .agregar-imagen{
+        height: 300px;
+        width: 350px;
+    }
+
+    /************ Nuestros clientes ****************/
+    .clientes-item img{
+        height: 100px;
+        width: 120px;
+    }
+
+    /************ Linea de productos ****************/
+    .productos-item figure img{
+        height: 70px;
+        width: 80px;
+    }
+
+    .productos-item figure p{
+        font-size: 15px;
+    }
+
+    /***** Déjanos un mensaje *****/
+    .tienes-pregunta h2{
+        font-size: 33px;
+    }
+
+    .text-pregunta p{
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /*** inputs ***/
+    .inputs .est-inp{
+        height: 40px;
+        width: 65%;
+    }
+
+    .inputs .grande{
+        width: 65%;
+    }
+
+    ::placeholder{
+        font-size: 14px;
+    }
+
+    .enviar button{
+        height: 35px;
+        width: 40%;
+        font-size: 19px;
+    }
+
+    /***** Nuestros proveedores *****/
+    .container-proveedores{
+        margin: 80px 0 80px 0;
+        background: #eceae6;
+    }
+
+    .tit-proveedores h2{
+        font-size: 30px;
+    }
+
+    .container-item-pro img{
+        height: 130px;
+        width: 160px;
+    }
+
+    /***** Parte final footer *****/
+    .logo2 img{
+        height:53px;
+        width: 240px;
+    }
+
+    .contactos2 h2{
+        font-size: 26px;
+    }
+
+    .contactos2 p{
+        font-size: 16px;
+    }
+
+    .mapa2 iframe{
+        height: 250px;
+        width: 400px;
+    }
+
+    /***** Derechos *****/
+    .derechos p{
+        padding: 17px 0 17px 0;
+        font-size: 13px;
+        width: 80%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:400px){
+    /* cambiar tamaño de los links */
+    .menu__links li a{
+        font-size: 11px;
+        padding: 0 10px 0 10px;
+    }
+
+    /* cambiar tamaño de letra del submenú */
+    .menu__item .menu__inside .menu__link--inside{
+        font-size: 11px;
+        padding: 3px 10px 3px 10px;
+    }
+
+    .text-welcome h1{
+        font-size: 25px;
+    }
+    /* padding entre bienvenido y experiencia */
+    .container-welcome{
+        margin-bottom: 70px;
+    }
+
+    /******************** 4 IMAGENES CON ZOOM ********************/
+    .agregar-imagen{
+        height: 200px;
+        width: 300px;
+    }
+
+    /************ Parrafo bienvenido ****************/
+    .text-welcome .text-parrafo{
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    /************ textos con íconos ****************/
+    .text-item i{
+        font-size: 40px;
+    }
+
+    .text-item h2{
+        font-size: 18px;
+    }
+
+    .text-item p{
+        font-size: 14px
+    }
+    
+    /************ Nuestros clientes ****************/
+    .titulo-clientes h2{
+        font-size: 25px;
+    }
+    .clientes-item{
+        display: block;
+        text-align: center;
+    }
+    
+    .clientes-item img{
+        height: 110px;
+        width: 130px;
+    }
+
+    /************ Linea de productos ****************/
+    .lineas-productos h2{
+        font-size: 25px;
+    }
+
+    .productos-item figure img{
+        height: 60px;
+        width: 70px;
+    }
+
+    /***** Donde encontrarnos *****/
+    .encontrarnos-container .tit-enc{
+        font-size: 25px;
+        padding: 30px 0 30px 0;
+    }
+
+    .mapa iframe{
+        height: 200px;
+        width: 300px;
+    }
+
+    .direccion .tit-dir{
+        font-size: 25px;
+    }
+    
+    .direccion p{
+    font-size: 16px;    
+    }
+
+     /***** Déjanos un mensaje *****/
+     .tienes-pregunta h2{
+        font-size: 25px;
+    }
+
+    .text-pregunta p{
+        font-size: 16px;
+    }
+
+    .dejanos-mensaje .dejanos{
+        width: 50%;
+        font-size: 16px;
+    }
+
+    /***** Nuestros proveedores *****/
+    .tit-proveedores h2{
+        font-size: 25px;
+    }
+
+    .container-item-pro{
+        display: block;
+        text-align: center;
+    }
+
+    .container-item-pro img{
+        height: 110px;
+        width: 130px;
+    }
+
+    /***** Parte final footer *****/
+    .logo2 img{
+        height:50px;
+        width: 230px;
+    }
+
+    .mapa2 iframe{
+        height: 220px;
+        width: 100%;
+    }
+
+    .btn-wsp{
+        bottom: 8px;
+        left: 8px;
+    }
+}

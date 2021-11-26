@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: auto;
+}
+
+.btn-wsp{
+    position: fixed;
+    bottom: 23px;
+    left: 23px;
+    z-index: 100;
+    color: white;
+    font-size: 50px;
+    background: #47A93F;
+    border-radius: 50px;
+    width: 65px;
+    height: 65px;
+    padding-left: 8px;
+}
+
+.btn-wsp:hover{
+    background: #378330;
+}
+
+.menu{ /* color y alto del nav */
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 2px 2px 2px 1px rgba(136, 136, 136, 0.2);
+    background: #fff;
+    height: 12%;
+}
+
+.menu__container{ /* clase de section, organizar..mi .nav-tamaño */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1150px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu__links{ /* es el ul padre */
+    height: 100%; /* con esto decidimos el tamaño del hover si es completo o por pocentajes*/
+    transition: transform .5s;
+    display: flex; /* se pone uno al lado de otro */
+}
+
+.menu__item{ /* son los li */
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0); /* con este se esconde */
+    --transform: rotate(0);
+}
+
+.menu__item:hover{ /* hover de los li */
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* con este mostramos el submenu*/
+    --transform: rotate(0); 
+}
+
+
+.menu__link{ /* clase de link "a href" */
+     color: #000;
+     text-decoration: none;
+     padding: 0 28px 0 28px;
+     display: flex; /* para centrar con el logo */
+     align-items: center; /* para centrar con el logo */
+     height: 100%;
+     font-weight: 500;
+     font-size: 18px;
+}
+
+.menu__link:hover{ /* hover de los links */
+    background: #d1225d;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.menu__nesting{ /* es el menu despegable (ul) dentro del (li) productos */
+    list-style: none;
+    transition:clip-path .4s;
+    clip-path: var(--clip); /* escondemos el submenu, ul dentro de li */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(103%);
+    background: #d1225d;
+}
+
+.menu__link--inside{
+    padding: 9px 15px 9px 24px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.menu__link--inside:hover{
+    background-color: #d1225d;
+    color: rgb(22, 22, 208);
+}
+
+/******************** SLIDER ********************/
+/******************** SLIDER ********************/
+/******************** SLIDER ********************/
+
+main{
+    padding-top: 115px;
+    width: 100%;
+}
+
+.container-slider{
+    width: 100%;
+    overflow: hidden; /*todo el vw */
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.slider{
+    display: flex;
+    width: 400%; /*depende el numero de imagenes, si son 4 va 400%*/
+    margin-left: -100%;
+}
+
+.slider__section{
+    width: 100%;
+    object-fit:initial;
+}
+
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.slider__btn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 39px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.slider__btn:hover{
+    background: #000;
+}
+
+.slider__btn--left{
+    left: 10px;
+}
+
+.slider__btn--right{
+    right: 10px;
+}
+
+/******************** 4 IMAGENES CON ZOOM ********************/
+/******************** 4 IMAGENES CON ZOOM ********************/
+/******************** 4 IMAGENES CON ZOOM ********************/
+
+.container-welcome{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 110px;
+}
+
+.container-img{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.img-welcome{
+    width: 250px;
+    height: 170px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.text-welcome{
+    text-align: center;
+    width: 100%;
+}
+
+.imagen-light{
+    position:fixed;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;  /* centrar imagen*/
+    top: 40px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 50%;
+    border-radius: 10px; /*imagen*/
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.showImage{
+    transform: scale(1); /* lo que va a ampliar tamaño*/
+}
+
+/* .close{
+    position: absolute;
+    top: 80px;
+    right: 250px;
+    width: 48px;
+    cursor: pointer;
+} */
+
+
+/***** textos de welcome ******/
+
+.text-welcome{
+    line-height: 28px;
+}
+
+.text-welcome .bienve{
+    width: 40%;
+    margin: auto;
+    font-size: 20px;
+    color: rgb(104, 68, 15);
+    background:rgb(255, 227, 190);
+    margin-bottom: 23px;
+    font-weight: 600;
+}
+
+.text-welcome h1{
+    font-size: 45px;
+    color: rgb(58, 58, 58);
+    margin-bottom: 23px;
+}
+
+.text-welcome .text-parrafo{
+    color: rgb(73, 73, 73);
+    font-weight: 600;
+    font-size: 17px;
+}
+
+
+/************ textos con íconos ****************/
+/************ textos con íconos ****************/
+
+.text-dos{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-bottom: 110px;
+}
+
+.text-item{
+    text-align: center;
+    padding: 0 25px 0 25px;
+}
+
+.text-item i{
+    color: rgb(151, 21, 21);
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+.text-item h2{
+    font-size: 25px;
+    color: rgb(41, 41, 41);
+    margin-bottom: 18px;
+}
+
+.text-item p{
+    color: rgb(77, 77, 77);
+    font-weight: 600;
+}
+
+/************ Nuestros clientes ****************/
+/************ Nuestros clientes ****************/
+
+.nuestros-clientes{
+    background: #eceae6;
+}
+
+.titulo-clientes h2{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 42px;
+    color: rgb(55, 55, 55);
+}
+
+.clientes-item{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/************ Linea de productos ****************/
+/************ Linea de productos ****************/
+
+.lineas-productos{
+    padding-top: 60px;
+}
+
+.lineas-productos h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 43px;
+    color: #333333;
+}
+
+.productos-item{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1110px;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.productos-item figure{
+    padding: 0px 20px 50px 20px;
+}
+
+.productos-item p{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+}
+
+/***** Donde encontrarnos *****//***** Donde encontrarnos *****/
+/***** Donde encontrarnos *****//***** Donde encontrarnos *****/
+
+.encontrarnos-container{
+    background: #eceae6;
+    margin-bottom: 60px;
+}
+
+.encontrarnos-container .tit-enc{
+    text-align: center;
+    padding: 65px 0 60px 0;
+    font-size: 43px;
+    color: #333333;
+}
+
+.encontrarnos-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 65px;
+}
+
+.direccion{
+    text-align: center;
+}
+
+.direccion .tit-dir{
+    text-align: center;
+    font-size: 38px;
+    color: #333333;
+    padding-bottom: 25px;
+}
+
+.direccion p{
+    color: #686868;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.direccion p a{
+    text-decoration: none;
+    color:#11a0dd;
+}
+
+/***** Déjanos un mensaje *****//***** Déjanos un mensaje *****/
+/***** Déjanos un mensaje *****//***** Déjanos un mensaje *****/
+
+.mensaje-container{
+    text-align: center;
+}
+
+.dejanos-mensaje{
+    margin-bottom: 30px;
+}
+
+.dejanos-mensaje .dejanos{
+    width: 40%;
+    margin: auto;
+    font-size: 18px;
+    color: rgb(104, 68, 15);
+    background:rgb(255, 227, 190);
+    margin-bottom: 23px;
+    font-weight: 600;
+}
+
+.tienes-pregunta h2{
+    color: rgb(60, 60, 60);
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.text-pregunta p{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(68, 68, 68);
+    margin-bottom: 40px;
+}
+
+/*** inputs ***/
+
+.inputs input{
+    margin: auto;
+}
+
+.inputs .est-inp{
+    border: 0;
+    background: #eceae6;
+    width: 55%;
+    height: 60px;
+    display: block;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    outline: none;
+}
+
+.inputs .grande{
+    border: 0;
+    background: #eceae6;
+    width: 55%;
+    height: 190px;
+    font-size: 18px;
+    font-weight: 700;
+    outline: none;
+    padding: 0 0 130px 30px;
+    margin-bottom: 30px;
+}
+
+::placeholder{
+    color: rgb(148, 148, 148);
+    font-size: 16px;
+}
+
+/********** button *************/
+
+.enviar button{
+    width: 55%;
+    height: 60px;
+    border: 0;
+    background: rgb(0,150,214);
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 100px;
+}
+
+.enviar button:hover{
+    cursor: pointer;
+    background: rgb(2, 121, 172);
+}
+
+.mensaje-container hr{
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: black;
+}
+
+/***** Nuestros proveedores *****//***** Nuestros proveedores *****/
+/***** Nuestros proveedores *****//***** Nuestros proveedores *****/
+
+.container-proveedores{
+    margin: 100px 0 100px 0;
+    background: #eceae6;
+}
+
+.tit-proveedores h2{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 42px;
+    color: rgb(55, 55, 55);
+}
+
+.container-item-pro{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/***** Parte final footer *****//***** Parte final footer *****/
+/***** Parte final footer *****//***** Parte final footer *****/
+
+.contac-mapa{
+    background: #003d6a;
+}
+
+.container-contact-mapa{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 80px 0 80px 0;
+}
+
+.logo2 img{
+    height:63px;
+    width: 280px;
+}
+
+.contactos2{
+    line-height: 30px;
+}
+
+.contactos2 h2{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contactos2 p{
+    color: rgb(160, 160, 160);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contactos2 a{
+    text-decoration: none;
+    color: #e11257;
+}
+
+/***** Derechos *****//***** Derechos *****/
+/***** Derechos *****//***** Derechos *****/
+
+.derechos{
+    background: #023152;
+}
+
+.derechos p{
+    text-align: center;
+    padding: 35px 0 35px 0;
+    color: rgb(186, 186, 186);
+    font-weight: 600;
+}
+
+.derechos a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.derechos a:hover{
+    color: #e11257;
+    transition: 0.4s;
+}
+
+
